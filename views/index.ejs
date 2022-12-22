@@ -1,0 +1,10 @@
+<%- include('./partials/head')  %> 
+<div class="m-auto mb-3 p-3 d-flex justify-content-between align-items-center col-md-12 col-lg-6" role="alert">
+  <h3 style="margin: 0;">¡Bienvenido! <%= user %></h3>
+  <a href="/logout">
+      <button type="button" class="btn btn-outline-info">Logout</button>
+  </a>
+</div>
+<%- include('./partials/form')  %> 
+<%- include('./partials/chat-box')  %> 
+<%- include('./partials/foot')  %> 

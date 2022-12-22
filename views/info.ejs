@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+  <title>Desafío clase 28 || INFO</title>
+</head>
+<body class="container">
+  <div class="container row m-auto mt-3">
+    <div class="m-auto col-md-12 ">
+        <h1 class="m-2">Info</h1>
+        <h6 class="m-2 text-truncate text-danger">Argumentos de entrada: <span class="text-success"><%= info.argvs %></span></h6>
+        
+        <h6 class="m-2 text-truncate text-danger">Nombre de la plataforma (sistema operativo): <span class="text-success"><%= info.platform %></span></h6>
+        
+        <h6 class="m-2 text-truncate text-danger">Versión de node.js: <span class="text-success"><%= info.nodeVersion %></span></h6>
+        
+        <h6 class="m-2 text-truncate text-danger">Memoria total reservada (rss): </h6>
+        <ul class="list-group m-2">
+          <li class="list-group-item "><span class="text-success"><b>rss: </b><%= (info.memoryUsage.rss / (1024 * 1024)).toFixed(4) %> MB</span></li>
+          <li class="list-group-item "><span class="text-success"><b>heapTotal: </b><%= (info.memoryUsage.heapTotal / (1024 * 1024)).toFixed(4) %> MB</span></li>
+          <li class="list-group-item "><span class="text-success"><b>heapUsed: </b> <%= (info.memoryUsage.heapUsed / (1024 * 1024)).toFixed(4) %> MB</span></li>
+          <li class="list-group-item "><span class="text-success"><b>external: </b> <%= (info.memoryUsage.external / (1024 * 1024)).toFixed(4) %> MB</span></li>
+          <li class="list-group-item "><span class="text-success"><b>arrayBuffers: </b> <%= (info.memoryUsage.arrayBuffers / (1024 * 1024)).toFixed(4) %> MB</span></li>
+        </ul>
+        
+        <h6 class="m-2 text-truncate text-danger">Procesadores Lógicos: <span class="text-success"><%= info.cpuCores %></span></h6>
+        <h6 class="m-2 text-truncate text-danger">Path de ejecución: <span class="text-success"><%= info.path %></span></h6>
+        <h6 class="m-2 text-truncate text-danger">Process id: <span class="text-success"><%= info.pid %></span></h6>
+        <h6 class="m-2 text-truncate text-danger">Carpeta del proyecto: <span class="text-success"><%= info.directory %></span></h6>
+    </div>          
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+</body>
+</html>
