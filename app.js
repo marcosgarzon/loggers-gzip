@@ -8,8 +8,8 @@ import MongoStore from 'connect-mongo'
 import {productRouter} from './routes/productRouter.js'
 import {chatRouter} from './routes/chat-router.js'
 import { infoRouter } from './routes/info-router.js'
-import ProductManager from './manager.js'
-import ChatManager from './chatManager.js'
+import ProductManager from './controllers/manager.js'
+import ChatManager from './controllers/chatManager.js'
 import loader from './daos/dataBaseLoader.js'
 import * as dotenv from 'dotenv' 
 import userModel from './models/User.js'
@@ -91,13 +91,13 @@ app.get('/', logChecker, loggerInfo, (req, res) => {
   res.render('index', {user: req.user.username})
 })
 
+app.get('/signup', loggerInfo, (req, res) => {
+  res.render('signup')
+})
+
 app.get('/dashboard', logChecker, loggerInfo, (req, res) => {
     logger.info(`${req.method} ${req.url}`)
     res.render('index', {user: req.user.username})
-})
-
-app.get('/signup', loggerInfo, (req, res) => {
-  res.render('signup')
 })
 
 app.get('/registerError', loggerInfo, (req, res) => {

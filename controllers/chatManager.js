@@ -1,4 +1,4 @@
-import {chatSchema} from './models/chatModel.js'
+import {chatSchema} from '../models/chatModel.js'
 
 export default class ChatManager {
     create = async (message) => {

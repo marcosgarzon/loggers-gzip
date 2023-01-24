@@ -1,5 +1,5 @@
 import {Router} from 'express';
-import Manager from '../manager.js'
+import Manager from '../controllers/manager.js'
 import {loggerInfo} from '../app.js'
 import errorLogger from '../app.js'
 

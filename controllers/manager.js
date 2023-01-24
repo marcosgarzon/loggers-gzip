@@ -1,4 +1,4 @@
-import { productSchema } from "./models/productModel.js"
+import { productSchema } from "../models/productModel.js"
 
 export default class Manager {
   create = async (product) => {
